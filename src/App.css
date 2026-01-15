@@ -1,0 +1,690 @@
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+}
+.sub {
+  margin: 8px 0 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.small {
+  font-size: 12px;
+  color: #666;
+}
+
+.btn {
+  border: 1px solid #ddd;
+  background: #111;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.92;
+}
+
+.btnGhost {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btnGhost:hover {
+  background: #f6f6f6;
+}
+
+.svgWrap {
+  width: 100%;
+}
+
+.shelf {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bg {
+  fill: #fafafa;
+  stroke: #e9e9e9;
+  stroke-width: 2;
+}
+
+.board {
+  fill: #eaeaea;
+}
+
+.caption {
+  font-size: 12px;
+  fill: #777;
+}
+
+.item {
+  cursor: pointer;
+  user-select: none;
+}
+
+.itemBox {
+  fill: #ffffff;
+  stroke: #e6e6e6;
+  stroke-width: 2;
+}
+
+.heat {
+  fill: #111;
+}
+
+.itemLabel {
+  font-size: 16px;
+  fill: #111;
+  font-weight: 700;
+}
+
+.itemCount {
+  font-size: 14px;
+  fill: #333;
+}
+
+.item.selected .itemBox {
+  stroke: #111;
+  stroke-width: 3;
+}
+
+.item:hover .itemBox {
+  stroke: #999;
+}
+
+.icon {
+  fill: none;
+  stroke: #111;
+  stroke-width: 2;
+  opacity: 0.95;
+}
+.icon path,
+.icon rect,
+.icon circle {
+  vector-effect: non-scaling-stroke;
+}
+
+.hintRow {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.hint {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #fcfcfc;
+  color: #333;
+  flex: 1;
+}
+
+.hintBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.priceBox {
+  margin-top: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.priceLabel {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.priceInput {
+  width: 110px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 8px 10px;
+  outline: none;
+}
+.priceInput:focus {
+  border-color: #bbb;
+}
+
+.statBlock {
+  margin-top: 14px;
+}
+
+.rank {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.rank li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rank li:hover {
+  background: #f6f6f6;
+}
+
+.rank li.active {
+  background: #111;
+  color: #fff;
+}
+
+.rank .label {
+  font-weight: 600;
+}
+
+.rank .value {
+  font-variant-numeric: tabular-nums;
+}
+
+.bars {
+  display: grid;
+  gap: 10px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  gap: 10px;
+  align-items: center;
+}
+
+.barLabel {
+  font-size: 12px;
+  color: #333;
+}
+
+.barTrack {
+  height: 12px;
+  border-radius: 999px;
+  background: #efefef;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.barFill {
+  height: 100%;
+  background: #111;
+  opacity: 0.45;
+  border-radius: 999px;
+}
+
+.barFill.isSelected {
+  opacity: 0.9;
+}
+
+.barNum {
+  text-align: right;
+  font-size: 12px;
+  color: #333;
+  font-variant-numeric: tabular-nums;
+}
+
+.budgetRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.budgetLabel {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.budgetInput {
+  width: 120px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 8px 10px;
+  outline: none;
+}
+.budgetInput:focus {
+  border-color: #bbb;
+}
+
+.badge {
+  font-size: 12px;
+  border: 1px solid #eee;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+}
+
+.badge.danger {
+  background: #111;
+  color: #fff;
+}
+
+.progressTrack {
+  margin-top: 10px;
+  height: 12px;
+  border-radius: 999px;
+  background: #efefef;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #111;
+  opacity: 0.65;
+  width: 0%;
+}
+
+.progressFill.danger {
+  opacity: 0.95;
+}
+
+.tip {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fcfcfc;
+  color: #111;
+  line-height: 1.5;
+}
+
+.tip.danger {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.memo {
+  width: 100%;
+  min-height: 90px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  outline: none;
+  resize: vertical;
+}
+
+.memo:focus {
+  border-color: #bbb;
+}
+
+.foot {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.sessionControls {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 12px;
+}
+
+.svgWrap.isDisabled {
+  opacity: 0.6;
+}
+
+.item.disabled {
+  cursor: not-allowed;
+}
+
+.smallText {
+  font-size: 12px;
+  fill: #666;
+}
+
+.sessionList {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.sessionItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: start;
+}
+
+.sessionBtn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.sessionBtn:hover {
+  background: #f7f7f7;
+}
+.sessionItem.active .sessionBtn {
+  border-color: #111;
+}
+
+.sessionTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.sessionTime {
+  font-size: 13px;
+  font-weight: 700;
+}
+.sessionMeta {
+  font-size: 12px;
+  color: #444;
+}
+.sessionMemo {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #555;
+}
+
+.sessionDetail {
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.detailGrid {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+.detailRow {
+  display: grid;
+  grid-template-columns: 1fr 70px 90px;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+}
+.detailLabel {
+  font-weight: 600;
+}
+.detailValue {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sessionControls {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 12px;
+}
+.svgWrap.isDisabled { opacity: 0.6; }
+.item.disabled { cursor: not-allowed; }
+.smallText { font-size: 12px; fill: #666; }
+
+.sessionList {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.sessionItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: start;
+}
+.sessionBtn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.sessionBtn:hover { background: #f7f7f7; }
+.sessionItem.active .sessionBtn { border-color: #111; }
+
+.sessionTop { display: flex; justify-content: space-between; gap: 10px; }
+.sessionTime { font-size: 13px; font-weight: 700; }
+.sessionMeta { font-size: 12px; color: #444; }
+.sessionMemo { margin-top: 6px; font-size: 12px; color: #555; }
+
+.sessionDetail { margin-top: 12px; border-top: 1px solid #eee; padding-top: 12px; }
+.detailGrid { display: grid; gap: 6px; margin-top: 8px; }
+.detailRow {
+  display: grid;
+  grid-template-columns: 1fr 70px 90px;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+}
+.detailLabel { font-weight: 600; }
+.detailValue { text-align: right; font-variant-numeric: tabular-nums; }
+
+.vizCard {
+  margin-top: 14px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px;
+  background: #fff;
+}
+
+.vizHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.vizTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111;
+}
+
+.vizRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .vizRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.legend {
+  display: grid;
+  gap: 8px;
+}
+
+.legendRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.legendRow:hover {
+  background: #f6f6f6;
+}
+
+.legendRow.isSel {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.legendLabel {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.legendPct {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 8px;
+  align-items: end;
+}
+
+.barBtn {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px 8px 10px;
+  cursor: pointer;
+}
+
+.barBtn:hover {
+  background: #f7f7f7;
+}
+
+.barCol {
+  height: 90px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.barFill2 {
+  width: 100%;
+  background: #111;
+  opacity: 0.65;
+}
+
+.barCap {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #444;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.vizCard {
+  margin-top: 14px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px;
+  background: #fff;
+}
+
+.vizHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.vizTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111;
+}
+
+.barSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
